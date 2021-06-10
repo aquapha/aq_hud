@@ -1,5 +1,9 @@
 fx_version "adamant"
 
+author "Kovalskis#5875"
+description "Minimalistic FiveM HUD"
+version "1.0.0"
+
 games {"gta5"}
 
 client_scripts {
