@@ -4,7 +4,7 @@
 
 **Guide on how to start using the HUD:**
 
-1.  Navigate to the **ui** folder within the resource and run the command bellow to install the necessary dependencies.
+1.  Navigate to the **ui** folder within the resource and run the command bellow to install the necessary packages.
 
         npm install
 
