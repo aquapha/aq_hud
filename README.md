@@ -1,5 +1,7 @@
 # Minimalistic FiveM HUD.
 
+        Plug and play since: 2021/06/29
+
 - FiveM HUD built with React + Typescript. Design was used from another HUD. Only way to edit the HUD for personal likings is only done within SCSS. Will make a more easily configurable HUD in the future.
 
 **Guide on how to start using the HUD:**
