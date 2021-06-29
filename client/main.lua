@@ -35,19 +35,24 @@ end)
 Citizen.CreateThread(function()
   while true do
     Citizen.Wait(400)
+
+    local ply = PlayerPedId()
+    local sPly = PlayerId()
+
     TriggerEvent("esx_status:onTick")
   
     ESX.TriggerServerCallback('aq_hud:getAccounts', function(cash, bank)
       SendNUIMessage({
         type = 'update',
         values = {
-          id = GetPlayerServerId(PlayerId()),
-          name = GetPlayerName(PlayerId()),
-          health = GetEntityHealth(PlayerPedId()) - 100,
-          armor = GetPedArmour(PlayerPedId()),
+          isShowing = not IsPauseMenuActive(),
+          id = GetPlayerServerId(sPly),
+          name = GetPlayerName(sPly),
+          health = GetEntityHealth(ply) - 100,
+          armor = GetPedArmour(ply),
           hunger = food,
           thirst = thirst,
-          isTalking = NetworkIsPlayerTalking(PlayerId()),
+          isTalking = NetworkIsPlayerTalking(sPly),
           cash = comma_value(cash),
           bank = comma_value(bank),
         }

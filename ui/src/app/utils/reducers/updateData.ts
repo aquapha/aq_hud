@@ -1,4 +1,5 @@
 export type DataState = {
+	isShowing: boolean;
 	name: string;
 	health: number;
 	armor: number;
@@ -10,6 +11,7 @@ export type DataState = {
 };
 
 const initialDataState = {
+	isShowing: true,
 	name: "Loading...",
 	health: 100,
 	armor: 100,

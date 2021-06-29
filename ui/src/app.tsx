@@ -12,13 +12,17 @@ Nui.registerEmit("update", (data: { type: any; values: any }) => {
 });
 
 export const App = () => {
-	const { id, name } = useSelector((state: RootState) => state.data);
+	const { isShowing, id, name } = useSelector((state: RootState) => state.data);
 
 	return (
 		<>
-			<Header id={id} name={name} />
-			<PlayerStats />
-			<AccountBalance />
+			{isShowing ? (
+				<div className='check'>
+					<Header id={id} name={name} />
+					<PlayerStats />
+					<AccountBalance />
+				</div>
+			) : null}
 		</>
 	);
 };
